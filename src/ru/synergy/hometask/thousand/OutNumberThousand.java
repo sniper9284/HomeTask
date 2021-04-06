@@ -3,11 +3,17 @@ package ru.synergy.hometask.thousand;
 public class OutNumberThousand {
 
     public static void main(String[] args) {
-	// цикл с предусловием вывода чисел от 1 до 1000
-        int n = 1;
-        while (n <= 1000) {
-            System.out.println(n);
-            n++;
+        int i, j;
+        boolean num;
+        for(i = 2; i < 1000; i++) {
+            num = true;
+            for (j = 2; j <= i/j; j++)
+                if((i % j) == 0) {
+                    num = false;
+                }
+            if (num) {
+                System.out.println(i);
+            }
         }
     }
 }

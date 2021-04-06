@@ -2,19 +2,19 @@ package ru.synergy.hometask.equation;
 
 import java.util.Scanner;
 
-public class equation {
+public class Equation {
     public static void main(String[] args) {
         // апрашиваем данные от пользователя
         Scanner scanner = new Scanner(System.in);
         System.out.println("Введите первый коэффициент");
-        double a = scanner.nextDouble();
+        double a;
+        a = scanner.nextDouble();
         // если первый = 0, предупреждаем
         if (a == 0) {
             System.out.println("Первый коэффициент не может быть 0");
         }
         System.out.println("Введите первый коэффициент");
-        double a1 = scanner.nextDouble();
-        a = a1;
+        a = scanner.nextDouble();
 
         System.out.println("Введите второй коэффициент");
         double b = scanner.nextDouble();

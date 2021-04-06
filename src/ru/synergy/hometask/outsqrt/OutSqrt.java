@@ -8,6 +8,5 @@ public class OutSqrt {
         System.out.println("Введите число для извелечения корня");
         int usersqrt = scanner.nextInt();
 
-
     }
 }
