@@ -7,16 +7,21 @@ public class OutNFibo {
     public static void main(String[] args) {
         Scanner scaneer = new Scanner(System.in);
         System.out.println("Введите номер числа Фибоначчи которое хотите узнать");
-        int nFibo = scaneer.nextInt();
+        BigInteger nFibo = new BigInteger(scaneer.nextLine());
 
-        BigInteger aFibo = new BigInteger("0");
-        BigInteger bFibo = new BigInteger("1");
+        System.out.println(getFibonacci(nFibo));
+    }
 
-        for (int i = 2; i <= nFibo; ++i) {
-            BigInteger nextFibo = new BigInteger(String.valueOf(aFibo.add(bFibo)));
-            aFibo = bFibo;
-            bFibo = nextFibo;
+    // функция рекурсии для поиска
+    public static int getFibonacci(BigInteger n) {
+        if (n.equals(BigInteger.ZERO)) {
+            return 0;
+        } else if (n.equals(BigInteger.ONE)) {
+            return 0;
+        }else if (n.equals(BigInteger.TWO)) {
+            return 1;
+        } else  {
+            return getFibonacci(n.subtract(BigInteger.ONE)) + getFibonacci(n.subtract(BigInteger.TWO));
         }
-        System.out.println(bFibo);
     }
 }
