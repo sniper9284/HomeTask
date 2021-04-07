@@ -17,7 +17,7 @@ public class OutNFibo {
         if (n.equals(BigInteger.ZERO)) {
             return 0;
         } else if (n.equals(BigInteger.ONE)) {
-            return 0;
+            return 1;
         }else if (n.equals(BigInteger.TWO)) {
             return 1;
         } else  {
