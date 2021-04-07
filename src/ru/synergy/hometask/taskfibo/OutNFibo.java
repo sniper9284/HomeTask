@@ -13,6 +13,10 @@ public class OutNFibo {
     }
 
     // функция рекурсии для поиска
+    //
+    // не уверен в 100% правильности данной функции с числами BigInteger
+    //
+    //
     public static int getFibonacci(BigInteger n) {
         if (n.equals(BigInteger.ZERO)) {
             return 0;
