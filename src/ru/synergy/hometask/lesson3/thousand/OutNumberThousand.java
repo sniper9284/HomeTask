@@ -1,4 +1,4 @@
-package ru.synergy.hometask.thousand;
+package ru.synergy.hometask.lesson3.thousand;
 
 public class OutNumberThousand {
 

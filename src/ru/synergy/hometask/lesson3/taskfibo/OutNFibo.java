@@ -1,4 +1,4 @@
-package ru.synergy.hometask.taskfibo;
+package ru.synergy.hometask.lesson3.taskfibo;
 
 import java.math.BigInteger;
 import java.util.Scanner;

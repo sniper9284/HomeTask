@@ -1,4 +1,4 @@
-package ru.synergy.hometask.equation;
+package ru.synergy.hometask.lesson3.equation;
 
 import java.util.Scanner;
 

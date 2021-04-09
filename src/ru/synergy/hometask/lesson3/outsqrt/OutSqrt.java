@@ -1,4 +1,4 @@
-package ru.synergy.hometask.outsqrt;
+package ru.synergy.hometask.lesson3.outsqrt;
 
 import java.util.Scanner;
 
