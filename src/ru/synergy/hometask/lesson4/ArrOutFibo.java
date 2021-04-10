@@ -1,5 +1,6 @@
 package ru.synergy.hometask.lesson4;
 
+import java.util.Arrays;
 import java.util.Scanner;
 
 public class ArrOutFibo {
@@ -24,9 +25,9 @@ public class ArrOutFibo {
                         arrayFibo[i] = arrayFibo[i - 1] + arrayFibo[i - 2];
                         counter = i;
                     }
-                    System.out.println(arrayFibo[inFiboToINT - 1]);
                 }
             }
+            System.out.println(arrayFibo[inFiboToINT - 1]);
         }
     }
 }
