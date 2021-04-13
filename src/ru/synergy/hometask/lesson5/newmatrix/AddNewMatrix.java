@@ -1,23 +1,27 @@
 package ru.synergy.hometask.lesson5.newmatrix;
 
+import java.util.Arrays;
 import java.util.Scanner;
 
 public class AddNewMatrix {
     public static void main(String[] args) {
-        CreateMatrix newMatrix = new CreateMatrix();
+        CreateMatrix defMatrix = new CreateMatrix(2);
+
         Scanner scan = new Scanner(System.in);
 
         System.out.println("Введите количество строк матрицы");
-        newMatrix.setM(scan.nextInt());
+        int m = scan.nextInt();
         System.out.println("Введите количество столбцов матрицы");
-        newMatrix.setN(scan.nextInt());
+        int n = scan.nextInt();
+        CreateMatrix newMatrix = new CreateMatrix(m, n);
+        newMatrix.setM(m);
+        newMatrix.setN(n);
         System.out.println("Заполним матрицу элементами");
-        int m = newMatrix.getM();
-        int n = newMatrix.getN();
         //вызвать сеттер матрицы
+        newMatrix.setMatrix(newMatrix.getM(), newMatrix.getN());
 
-        System.out.println(newMatrix.getN());
-        System.out.println(newMatrix.getM());
-        //вызвать геттер матрицы
+        newMatrix.getMatrix();
+        //System.out.println(Arrays.deepToString(newMatrix.getMatrix()));
+        //System.out.println(Arrays.deepToString(defMatrix.getMatrix()));
     }
 }

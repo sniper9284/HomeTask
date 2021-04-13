@@ -1,6 +1,5 @@
-package ru.synergy.hometask.lesson4;
+package ru.synergy.hometask.lesson4.arroutfibo;
 
-import java.util.Arrays;
 import java.util.Scanner;
 
 public class ArrOutFibo {
