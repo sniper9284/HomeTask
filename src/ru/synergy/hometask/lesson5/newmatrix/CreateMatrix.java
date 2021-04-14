@@ -23,15 +23,6 @@ public class CreateMatrix {
         this.n = n;
     }
 
-    public void setMatrix(int m, int n) {
-        for (int i=0;i < m;++i){
-            for (int j=0;j < n;++j){
-                matrix[i][j]=(int)(Math.random()*10);
-            }
-        }
-        this.matrix  = new int[m][n];
-    }
-
     public int getM() {
         return m;
     }
@@ -40,7 +31,41 @@ public class CreateMatrix {
         return n;
     }
 
-    public int[][] getMatrix() {
-        return this.matrix;
+    public int[][] newArr(int a, int b) {
+        for (int i = 0; i < matrix.length; ++i) {
+            for (int j = 0; j < matrix[i].length; ++j) {
+                matrix[i][j] = (int) (Math.random() * 10);
+            }
+        }
+        return matrix;
+    }
+
+    public int[][] newArrDef(int defMN) {
+        for (int i = 0; i < matrix.length; ++i) {
+            for (int j = 0; j < matrix[i].length; ++j) {
+                matrix[i][j] = (int) (Math.random() * 10);
+            }
+        }
+        return matrix;
+    }
+
+    public void outMatrix() {
+        int[][] arr = newArr(getM(), getN());
+        for (int i = 0; i < arr.length; i++) {
+            for (int j = 0; j < arr[i].length; j++) {
+                System.out.print(" " + arr[i][j] + " ");
+            }
+            System.out.println();
+        }
+    }
+
+    public void outMatrixDef() {
+        int[][] arrDef = newArrDef(2);
+        for (int i = 0; i < arrDef.length; i++) {
+            for (int j = 0; j < arrDef[i].length; j++) {
+                System.out.print(" " + arrDef[i][j] + " ");
+            }
+            System.out.println();
+        }
     }
 }
