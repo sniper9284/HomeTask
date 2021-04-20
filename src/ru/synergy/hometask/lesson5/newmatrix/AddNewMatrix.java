@@ -44,6 +44,10 @@ public class AddNewMatrix {
         System.out.println("вывод вычитания матриц");
         CreateMatrix difMatrix = new CreateMatrix();
         difMatrix.difArrOut(newmatrix, newmatrix2);
+
+        System.out.println("вывод X2");
+        CreateMatrix arrX2 = new CreateMatrix();
+        arrX2.arrX2(newmatrix);
     }
 
 }

@@ -1,8 +1,8 @@
 package ru.synergy.hometask.lesson6;
 
 public class Parrot extends Animal {
-    public Parrot(String name, String say) {
-        super(name, say);
+    public Parrot() {
+        super("попугай", "ЧИРИК");
     }
 
     @Override

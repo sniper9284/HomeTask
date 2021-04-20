@@ -7,10 +7,10 @@ public class AnimalRunner {
 
     public static void main(String[] args) {
         Animal any = new Animal("животные", "говорят");
-        Animal dog = new Dog("собака", "ГАВ");
-        Animal cat = new Cat("кот", "МЯУ");
-        Animal horse = new Horse("лошадь", "ИГОГО");
-        Animal parrot = new Parrot("попугай", "ЧИРИК");
+        Animal dog = new Dog();
+        Animal cat = new Cat();
+        Animal horse = new Horse();
+        Animal parrot = new Parrot();
 
         List<Animal> zoo = Arrays.asList(any, dog, cat, horse, parrot);
         for (Animal outSay : zoo) {

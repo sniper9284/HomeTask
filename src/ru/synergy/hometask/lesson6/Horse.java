@@ -1,8 +1,8 @@
 package ru.synergy.hometask.lesson6;
 
 public class Horse extends Animal {
-    public Horse(String name, String say) {
-        super(name, say);
+    public Horse() {
+        super("лошадь", "ИГОГО");
     }
 
     @Override

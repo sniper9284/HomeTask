@@ -16,9 +16,7 @@ public class CreateMatrix {
     }
 
     public CreateMatrix() {
-        this.matrix = new int[m][n];
     }
-
 
     public void setM(int m) {
         this.m = m;
@@ -75,13 +73,11 @@ public class CreateMatrix {
     }
 
     public void multyArrOut(int[][] newmatrix, int[][] newmatrix2) {
-        int[][] arr = newmatrix;
-        int[][] arr2 = newmatrix2;
-        int[][] multyArr = new int[arr.length][arr2[0].length];
+        int[][] multyArr = new int[newmatrix.length][newmatrix2[0].length];
         for (int i = 0; i < multyArr[0].length; i++)
             for (int j = 0; j < multyArr.length; j++)
-                for (int k = 0; k < arr[0].length; k++)
-                    multyArr[i][j] = multyArr[i][j] + (arr[i][k] * arr2[k][j]);
+                for (int k = 0; k < newmatrix[0].length; k++)
+                    multyArr[i][j] = multyArr[i][j] + (newmatrix[i][k] * newmatrix2[k][j]);
         for (int i = 0; i < multyArr.length; i++) {
             for (int j = 0; j < multyArr[0].length; j++) {
                 System.out.print(" " + multyArr[i][j] + " ");
@@ -91,13 +87,11 @@ public class CreateMatrix {
     }
 
     public void summArrOut(int[][] newmatrix, int[][] newmatrix2) {
-        int[][] arr = newmatrix;
-        int[][] arr2 = newmatrix2;
-        int[][] summArr = new int[arr.length][arr2[0].length];
+        int[][] summArr = new int[newmatrix.length][newmatrix2[0].length];
         for (int i = 0; i < summArr[0].length; i++)
             for (int j = 0; j < summArr.length; j++)
-                for (int k = 0; k < arr[0].length; k++)
-                    summArr[i][j] = summArr[i][j] + (arr[i][k] + arr2[k][j]);
+                for (int k = 0; k < newmatrix[0].length; k++)
+                    summArr[i][j] = summArr[i][j] + (newmatrix[i][k] + newmatrix2[k][j]);
         for (int i = 0; i < summArr.length; i++) {
             for (int j = 0; j < summArr[0].length; j++) {
                 System.out.print(" " + summArr[i][j] + " ");
@@ -107,16 +101,28 @@ public class CreateMatrix {
     }
 
     public void difArrOut(int[][] newmatrix, int[][] newmatrix2) {
-        int[][] arr = newmatrix;
-        int[][] arr2 = newmatrix2;
-        int[][] summArr = new int[arr.length][arr2[0].length];
+        int[][] summArr = new int[newmatrix.length][newmatrix2[0].length];
         for (int i = 0; i < summArr[0].length; i++)
             for (int j = 0; j < summArr.length; j++)
-                for (int k = 0; k < arr[0].length; k++)
-                    summArr[i][j] = summArr[i][j] + (arr[i][k] - arr2[k][j]);
+                for (int k = 0; k < newmatrix[0].length; k++)
+                    summArr[i][j] = summArr[i][j] + (newmatrix[i][k] - newmatrix2[k][j]);
         for (int i = 0; i < summArr.length; i++) {
             for (int j = 0; j < summArr[0].length; j++) {
                 System.out.print(" " + summArr[i][j] + " ");
+            }
+            System.out.println();
+        }
+    }
+    public void arrX2 (int [][] CreateMatrix) {
+        int[][] arrX2 = CreateMatrix;
+        for (int i=0; i < arrX2[0].length; i++) {
+            for (int j = 0; j < arrX2.length; j++) {
+                arrX2[i][j] = arrX2[i][j] + (arrX2[i][j] ^ 2);
+            }
+        }
+        for (int i = 0; i < arrX2.length; i++) {
+            for (int j = 0; j < arrX2[0].length; j++) {
+                System.out.print(" " + arrX2[i][j] + " ");
             }
             System.out.println();
         }
