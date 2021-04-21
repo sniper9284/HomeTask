@@ -15,23 +15,11 @@ public class Cat {
         this.run = minr + (int) (Math.random() * maxr);
     }
 
-    public String getName() {
-        return name;
-    }
-
-    public int getJump() {
-        return jump;
-    }
-
-    public int getRun() {
-        return run;
-    }
-
     public String jumper() {
-        return "Кот: " + name;
+        return "Кот: " + name + " прыгнул ";
     }
 
     public String runner() {
-        return "Кот: " + name;
+        return "Кот: " + name + " пробежал ";
     }
 }

@@ -15,23 +15,11 @@ public class Robot {
         this.run = minr + (int) (Math.random() * maxr);
     }
 
-    public String getName() {
-        return name;
-    }
-
-    public int getJump() {
-        return jump;
-    }
-
-    public int getRun() {
-        return run;
-    }
-
     public String jumper() {
-        return "Робот: " + name;
+        return "Робот: " + name + " прыгнул ";
     }
 
     public String runner() {
-        return "Робот: " + name;
+        return "Робот: " + name + " пробежал ";
     }
 }

@@ -1,39 +1,68 @@
 package ru.synergy.hometask.lesson7;
 
-import java.lang.reflect.Array;
-import java.util.Arrays;
-
 public class Runner {
     public static void main(String[] args) {
 
-        Treadmill t = new Treadmill();
-        Wall w = new Wall();
         Robot r = new Robot("R2D2");
         Cat c = new Cat("Barsik");
         Human h = new Human("Oleg");
 
-        Object[] sportsmen = new Object[3];
-        sportsmen[0] = r;
-        sportsmen[1] = c;
-        sportsmen[2] = h;
+        Games[] track = new Games[]{
+                new Treadmill(Treadmill.maxDistance),
+                new Wall(Wall.maxWall)
+        };
 
-        int[] obstacle = new int[2];
-        obstacle[0] = t.getD();
-        obstacle[1] = w.getH();
+        Object[] sportsmen = new Object[]{r, c, h};
 
-        for (int i=0; i < obstacle.length; i++) {
-            if (sportsmen[i].equals() < w.getH()) {
-                System.out.println(sportsmen[i] + " не перепрыгнул стену");
-            } else {
-                System.out.println(r.jumper() + " перепрыгнул стену");
-                if (r.getRun() < distance) {
-                    System.out.println(r.runner() + " не добежал до финиша");
-                } else {
-                    System.out.println(r.runner() + " добежал до финиша");
+        for (Object elem : sportsmen) {
+            if (elem instanceof Human) {
+                for (Object round : track) {
+                    if (h.run >= ((Games) round).length) {
+                        System.out.println(h.runner() + "дистанцию " + ((Games) round).length);
+                    } else {
+                        System.out.println("Человек: " + h.name + " не смог пробежать дистанцию" + ((Games) round).length);
+                        break;
+                    }
+                    if (h.jump >= ((Games) round).height) {
+                        System.out.println(h.jumper() + " на высоту " + ((Games) round).height);
+                    } else {
+                        System.out.println(h.jumper() + " и не смог перепрыгнуть высоту " + ((Games) round).height);
+                        break;
+                    }
+                }
+            }
+            if (elem instanceof Cat) {
+                for (Object round : track) {
+                    if (c.run >= ((Games) round).length) {
+                        System.out.println(h.runner() + "дистанцию " + ((Games) round).length);
+                    } else {
+                        System.out.println("Кот: " + c.name + " не смог пробежать дистанцию" + ((Games) round).length);
+                        break;
+                    }
+                    if (c.jump >= ((Games) round).height) {
+                        System.out.println(c.jumper() + " на высоту " + ((Games) round).height);
+                    } else {
+                        System.out.println(c.jumper() + " и не смог перепрыгнуть высоту " + ((Games) round).height);
+                        break;
+                    }
+                }
+            }
+            if (elem instanceof Robot) {
+                for (Object round : track) {
+                    if (r.run >= ((Games) round).length) {
+                        System.out.println(r.runner() + "дистанцию " + ((Games) round).length);
+                    } else {
+                        System.out.println("Робот: " + r.name + " не смог пробежать дистанцию" + ((Games) round).length);
+                        break;
+                    }
+                    if (r.jump >= ((Games) round).height) {
+                        System.out.println(r.jumper() + " на высоту " + ((Games) round).height);
+                    } else {
+                        System.out.println(r.jumper() + " и не смог перепрыгнуть высоту " + ((Games) round).height);
+                        break;
+                    }
                 }
             }
         }
-
-        System.out.println();
     }
 }
