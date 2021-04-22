@@ -1,6 +1,6 @@
 package ru.synergy.hometask.lesson7;
 
-public class Cat {
+public class Cat implements Games {
     String name;
     int jump;
     int run;
@@ -15,11 +15,13 @@ public class Cat {
         this.run = minr + (int) (Math.random() * maxr);
     }
 
-    public String jumper() {
-        return "Кот: " + name + " прыгнул ";
+    @Override
+    public void jamper() {
+        System.out.println("Кот: " + name + " прыгнул ");
     }
 
-    public String runner() {
-        return "Кот: " + name + " пробежал ";
+    @Override
+    public void runner() {
+        System.out.println("Кот: " + name + " пробежал ");
     }
 }

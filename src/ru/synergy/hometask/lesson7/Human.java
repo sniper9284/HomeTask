@@ -1,6 +1,6 @@
 package ru.synergy.hometask.lesson7;
 
-public class Human {
+public class Human implements Games {
     String name;
     int jump;
     int run;
@@ -15,11 +15,13 @@ public class Human {
         this.run = minr + (int) (Math.random() * maxr);
     }
 
-    public String jumper() {
-        return "Человек: " + name + " прыгнул ";
+    @Override
+    public void jamper() {
+        System.out.println("Человек: " + name + " прыгнул ");
     }
 
-    public String runner() {
-        return "Человек: " + name + " пробежал ";
+    @Override
+    public void runner() {
+        System.out.println("Человек: " + name + " пробежал ");
     }
 }
