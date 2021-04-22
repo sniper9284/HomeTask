@@ -22,8 +22,9 @@ public class AddNewMatrix {
         newMatrix2.setM(m);
         newMatrix2.setN(n);
 
-        int[][] newmatrix = newMatrix.newArr(newMatrix.getM(), newMatrix.getN());
-        int[][] newmatrix2 = newMatrix2.newArr(newMatrix2.getM(), newMatrix2.getN());
+        int[][] newmatrix = newMatrix.newArr(m, n);
+        int[][] newmatrix2 = newMatrix2.newArr(m, n);
+        CreateMatrix multyMatrix = new CreateMatrix();
         System.out.println("Заполним матрицу элементами");
 
         System.out.println("вывод матрицы 1");
@@ -31,23 +32,23 @@ public class AddNewMatrix {
         defMatrix.outMatrixDef();
 
         System.out.println("вывод матрицы 2");
-        newMatrix2.outMatrixDef();
+        newMatrix2.outMatrix();
 
         System.out.println("вывод произведения матриц");
-        CreateMatrix multyMatrix = new CreateMatrix();
         multyMatrix.multyArrOut(newmatrix, newmatrix2);
+        multyMatrix.outMatrix();
 
         System.out.println("вывод суммы матриц");
-        CreateMatrix summMatrix = new CreateMatrix();
-        summMatrix.summArrOut(newmatrix, newmatrix2);
+        multyMatrix.summArrOut(newmatrix, newmatrix2);
+        multyMatrix.outMatrix();
 
         System.out.println("вывод вычитания матриц");
-        CreateMatrix difMatrix = new CreateMatrix();
-        difMatrix.difArrOut(newmatrix, newmatrix2);
+        multyMatrix.difArrOut(newmatrix, newmatrix2);
+        multyMatrix.outMatrix();
 
         System.out.println("вывод X2");
-        CreateMatrix arrX2 = new CreateMatrix();
-        arrX2.arrX2(newmatrix);
+        multyMatrix.arrX2(newmatrix);
+        multyMatrix.outMatrix();
     }
 
 }

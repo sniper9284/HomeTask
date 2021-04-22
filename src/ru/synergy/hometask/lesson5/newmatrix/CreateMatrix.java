@@ -53,7 +53,7 @@ public class CreateMatrix {
     }
 
     public void outMatrix() {
-        int[][] arr = newArr(getM(), getN());
+        int[][] arr = matrix;
         for (int i = 0; i < arr.length; i++) {
             for (int j = 0; j < arr[i].length; j++) {
                 System.out.print(" " + arr[i][j] + " ");
@@ -72,59 +72,44 @@ public class CreateMatrix {
         }
     }
 
-    public void multyArrOut(int[][] newmatrix, int[][] newmatrix2) {
+    public int[][] multyArrOut(int[][] newmatrix, int[][] newmatrix2) {
         int[][] multyArr = new int[newmatrix.length][newmatrix2[0].length];
-        for (int i = 0; i < multyArr[0].length; i++)
-            for (int j = 0; j < multyArr.length; j++)
-                for (int k = 0; k < newmatrix[0].length; k++)
-                    multyArr[i][j] = multyArr[i][j] + (newmatrix[i][k] * newmatrix2[k][j]);
+        for (int i = 0; i < multyArr.length; i++)
+            for (int j = 0; j < newmatrix.length; j++)
+                for (int k = 0; k < newmatrix2[0].length; k++)
+                    multyArr[i][j] = newmatrix[i][k] * newmatrix2[k][j];
+        this.matrix = multyArr;
+        return matrix;
+    }
+
+    public int[][] summArrOut(int[][] newmatrix, int[][] newmatrix2) {
+        int[][] multyArr = new int[newmatrix.length][newmatrix2[0].length];
+        for (int i = 0; i < multyArr.length; i++)
+            for (int j = 0; j < newmatrix.length; j++)
+                for (int k = 0; k < newmatrix2[0].length; k++)
+                    multyArr[i][j] = newmatrix[i][k] + newmatrix2[k][j];
+        this.matrix = multyArr;
+        return matrix;
+    }
+
+    public int[][] difArrOut(int[][] newmatrix, int[][] newmatrix2) {
+        int[][] multyArr = new int[newmatrix.length][newmatrix2[0].length];
+        for (int i = 0; i < multyArr.length; i++)
+            for (int j = 0; j < newmatrix.length; j++)
+                for (int k = 0; k < newmatrix2[0].length; k++)
+                    multyArr[i][j] = newmatrix[i][k] - newmatrix2[k][j];
+        this.matrix = multyArr;
+        return matrix;
+    }
+
+    public int[][] arrX2(int[][] newmatrix) {
+        int[][] multyArr = newmatrix;
         for (int i = 0; i < multyArr.length; i++) {
-            for (int j = 0; j < multyArr[0].length; j++) {
-                System.out.print(" " + multyArr[i][j] + " ");
-            }
-            System.out.println();
-        }
-    }
-
-    public void summArrOut(int[][] newmatrix, int[][] newmatrix2) {
-        int[][] summArr = new int[newmatrix.length][newmatrix2[0].length];
-        for (int i = 0; i < summArr[0].length; i++)
-            for (int j = 0; j < summArr.length; j++)
-                for (int k = 0; k < newmatrix[0].length; k++)
-                    summArr[i][j] = summArr[i][j] + (newmatrix[i][k] + newmatrix2[k][j]);
-        for (int i = 0; i < summArr.length; i++) {
-            for (int j = 0; j < summArr[0].length; j++) {
-                System.out.print(" " + summArr[i][j] + " ");
-            }
-            System.out.println();
-        }
-    }
-
-    public void difArrOut(int[][] newmatrix, int[][] newmatrix2) {
-        int[][] summArr = new int[newmatrix.length][newmatrix2[0].length];
-        for (int i = 0; i < summArr[0].length; i++)
-            for (int j = 0; j < summArr.length; j++)
-                for (int k = 0; k < newmatrix[0].length; k++)
-                    summArr[i][j] = summArr[i][j] + (newmatrix[i][k] - newmatrix2[k][j]);
-        for (int i = 0; i < summArr.length; i++) {
-            for (int j = 0; j < summArr[0].length; j++) {
-                System.out.print(" " + summArr[i][j] + " ");
-            }
-            System.out.println();
-        }
-    }
-    public void arrX2 (int [][] CreateMatrix) {
-        int[][] arrX2 = CreateMatrix;
-        for (int i=0; i < arrX2[0].length; i++) {
-            for (int j = 0; j < arrX2.length; j++) {
-                arrX2[i][j] = arrX2[i][j] + (arrX2[i][j] ^ 2);
+            for (int j = 0; j < newmatrix.length; j++) {
+                multyArr[i][j] = newmatrix[i][j] ^ 2;
             }
         }
-        for (int i = 0; i < arrX2.length; i++) {
-            for (int j = 0; j < arrX2[0].length; j++) {
-                System.out.print(" " + arrX2[i][j] + " ");
-            }
-            System.out.println();
-        }
+        this.matrix = multyArr;
+        return matrix;
     }
 }
