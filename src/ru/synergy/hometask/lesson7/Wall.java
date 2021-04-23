@@ -6,12 +6,12 @@ public class Wall implements Block {
     int height = min + (int) (Math.random() * max);
 
     @Override
-    public void block() {
-        System.out.println(" на высоту " + height);
+    public String block() {
+        return " на высоту " + height;
     }
 
     @Override
-    public void fail() {
-        System.out.println(" ниже " + height + " и выбывает!");
+    public String fail() {
+        return " ниже " + height + " и выбывает!";
     }
 }

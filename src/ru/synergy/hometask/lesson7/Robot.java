@@ -16,12 +16,12 @@ public class Robot implements Games {
     }
 
     @Override
-    public void jamper() {
-        System.out.println("Робот: " + name + " прыгнул ");
+    public String jamper() {
+        return "Робот: " + name + " прыгнул ";
     }
 
     @Override
-    public void runner() {
-        System.out.println("Робот: " + name + " пробежал ");
+    public String runner() {
+        return "Робот: " + name + " пробежал ";
     }
 }

@@ -6,12 +6,12 @@ public class Treadmill implements Block {
     int distance = min + (int) (Math.random() * max);
 
     @Override
-    public void block() {
-        System.out.println(" дистанцию " + distance);
+    public String block() {
+        return " дистанцию " + distance;
     }
 
     @Override
-    public void fail() {
-        System.out.println(" меньше " + distance + " и выбывает!");
+    public String fail() {
+        return " меньше " + distance + " и выбывает!";
     }
 }

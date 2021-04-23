@@ -16,12 +16,12 @@ public class Human implements Games {
     }
 
     @Override
-    public void jamper() {
-        System.out.println("Человек: " + name + " прыгнул ");
+    public String jamper() {
+        return "Человек: " + name + " прыгнул ";
     }
 
     @Override
-    public void runner() {
-        System.out.println("Человек: " + name + " пробежал ");
+    public String runner() {
+        return "Человек: " + name + " пробежал ";
     }
 }

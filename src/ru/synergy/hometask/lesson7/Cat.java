@@ -16,12 +16,12 @@ public class Cat implements Games {
     }
 
     @Override
-    public void jamper() {
-        System.out.println("Кот: " + name + " прыгнул ");
+    public String jamper() {
+        return "Кот: " + name + " прыгнул ";
     }
 
     @Override
-    public void runner() {
-        System.out.println("Кот: " + name + " пробежал ");
+    public String runner() {
+        return "Кот: " + name + " пробежал ";
     }
 }

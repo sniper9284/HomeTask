@@ -2,7 +2,7 @@ package ru.synergy.hometask.lesson7;
 
 public interface Games {
 
-    public void jamper();
+    String  jamper();
 
-    public void runner();
+    String runner();
 }
