@@ -34,4 +34,3 @@ public class Sportsmen implements CreateSportsmen {
         }
     }
 }
-
